@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Unshort.ru - раскукожим!{% endblock %}
+{% block content %}
+  <form   action="/" method="get"> 
+      <div class="ask" >Короткая ссылка<br/> </div>
+      <input type="text" name="url" size="50" value="" /> 
+      <div class="btn"> <input type="submit"  value=" Раскукожить "/> </div> 
+  </form>
+{% if response and response.result == 'true' %}
+<div class="memo">Вас пошлют сюда: <b><a href="{{response.redirect}}">{{response.redirect}}</a></b></div> 
+{% endif %}
+{% endblock %}

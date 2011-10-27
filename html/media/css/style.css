@@ -1,0 +1,141 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+{
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+body
+{
+  background: #FFF;
+  font-family: helvetica,sans-serif;
+  text-align: center;
+}
+form
+{
+  display: inline;
+}
+.link
+{
+  font-size: 125%;
+  margin: 1em 0 0 50px;
+}
+#main
+{
+  margin-top: 60px;
+}
+.check, .check a, .check a:visited {
+color: #369;
+margin-top:15px;
+text-decoration: none;
+}
+.check a:hover {
+color: blue;
+text-decoration: underline;
+}
+
+#footer
+{
+}
+.logo
+{
+  font-weight: 700;
+}
+.result
+{
+  color: #6C6A6A;
+  display: block;
+  font-size: 120%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  border: 3px solid #ffcc66;
+  width: 700px;
+  background-color: white;
+  overflow: auto;
+  white-space: nowrap;
+}
+.result_text
+{
+  color: #000;
+  font-size: 90%;
+  text-align: left;
+}
+textarea
+{
+  border: 3px solid #FC6;
+  font-family: Tahoma, sans-serif;
+  height: 80px;
+  padding: 5px;
+  width: 600px;
+}
+.ask
+{
+  color: #6C6A6A;
+  font-size: 120%;
+}
+.memo
+{
+  color: #6C6A6A;
+  font-size: 120%;
+  font-weight: 700;
+  margin: .5em;
+}
+.error
+{
+  margin: 0 2em 0 4em;
+  overflow: hidden;
+  padding: 5px .5em;
+  width: 31em;
+}
+.btn
+{
+  margin: .5em;
+}
+input[type="text"]
+{
+  border: 3px solid #FC6;
+  color: #999;
+  font-size: 1.3em;
+  padding: 4px 6px;
+}
+input[type="submit"]
+{
+  font-size: 1.3em;
+  margin-bottom: 3em;
+}
+.about
+{
+  color: #6C6A6A;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
+  text-align: left;
+  width: 600px;
+}
+#mascot{
+position: absolute; 
+z-index: -1; 
+top:45px
+}
+#mascot img {
+position: relative;
+left:-200px;
+}
+
+.small
+{
+	font-size: 12px;
+	
+}
+.img
+{
+	vertical-align: middle;
+	padding-right:4px;
+}
