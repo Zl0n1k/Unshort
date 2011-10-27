@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+ * Copyright (c) 2010 The Chromium Authors. All rights reserved.  Use of this
+ * source code is governed by a BSD-style license that can be found in the
+ * LICENSE file.
+-->
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      var check = false;
+      var timer = null;
+      var tmp = null;
+      var request_data = null;
+      var request_callback = null;
+
+      function fetchUnshorterData(callback,settings) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(data) {
+          if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+              var data = JSON.parse(xhr.responseText);
+              callback({"settings":settings,"result":data});
+            } else {
+            }
+          }
+        }
+
+        //UNSHORTER URL
+        var url = "http://unshort.ru/json/?url=" + encodeURIComponent(settings.link);
+
+        xhr.open('GET', url, true);
+        xhr.send();
+      };
+
+
+
+      function checkFocus()
+      {
+        clearTimeout(timer);
+        fetchUnshorterData(request_callback,request_data);
+      }
+
+      function uncheckFocus()
+      {
+        clearTimeout(timer);
+        clearTimeout(tmp);
+      }
+
+
+      function onRequest(request, sender, callback) {
+        if(request.action == 'checkItem')
+        {
+           request_data = request.data;
+           request_callback = callback;
+
+           clearTimeout(timer); 
+           timer = setTimeout(checkFocus,500);
+        }
+
+        if(request.action == 'uncheckItem')
+        {
+           meta_data = null;
+           var tmp = setTimeout(uncheckFocus,5);
+        }
+
+
+        if (request.action == 'fetchUnshorterData')
+        {
+          fetchUnshorterData(callback,request.data);
+        }
+      };
+
+      chrome.extension.onRequest.addListener(onRequest);
+    </script>
+  </body>
+</html>

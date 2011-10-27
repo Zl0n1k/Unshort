@@ -1,0 +1,9 @@
+{
+    "name": "unshort", 
+    "license": "MPL 1.1/GPL 2.0/LGPL 2.1", 
+    "author": "Boris Soldatov", 
+    "version": "0.0.8", 
+    "fullName": "unshort", 
+    "id": "unshort@unshort.ru", 
+    "description": "Addon for links unshorting"
+}

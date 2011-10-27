@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="http://unshorter.ru/" version="0.7">
+	<name>Unshorter</name>
+	<description>Покажет реальное содержание короткой ссылки с любого сайта. Предупредит об опасности.</description>
+  	<author href="http://unshort.ru/" email="djsaff@gmail.com">unshort.ru</author>
+    <access origin="http://unshort.ru/"/>
+  	<icon src="unshort.png"/>
+</widget>
+
